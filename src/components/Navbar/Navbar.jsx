@@ -1,7 +1,12 @@
 
+import { IoMdClose, IoMdMenu } from "react-icons/io";
 import Link from './Link/Link';
+import { useState } from "react";
+
 
 const Navbar = () => {
+
+    const [open,setOpen] =useState(false)
 
     const routes = [
         { id: 1, path: "/", name: "Home" },
@@ -12,6 +17,18 @@ const Navbar = () => {
       ];
     return (
         <div>
+
+
+
+             <div className="md:hidden text-4xl" onClick={()=>setOpen(!open)}>
+                {
+                    open === true ? <IoMdClose/>
+                    : <IoMdMenu ></IoMdMenu>
+                }
+               
+
+             </div>
+            
 
             <ul className='md:flex'>
                 {
