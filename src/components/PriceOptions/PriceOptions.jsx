@@ -46,9 +46,11 @@ const PriceOptions = () => {
         <div>
             <h1>Best price in the town</h1>
 
-            {
-                priceOptions.map(option => <PriceOption key={option.id} option={option}>  </PriceOption> )
-            }
+            <div className="md:grid grid-cols-3 gap-3 py-4" >
+                    {
+                        priceOptions.map(option => <PriceOption key={option.id} option={option}>  </PriceOption> )
+                    }
+            </div>
         </div>
     );
 };
